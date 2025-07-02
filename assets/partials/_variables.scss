@@ -98,3 +98,25 @@ $fontZilla : "Poiret One", sans-serif;
     border: 1px dotted black;
     border-radius: 50px;
 } 
+
+
+//VOLA VIAAA
+@mixin floating {
+   box-shadow: 5px 5px 13px -2px rgba(0,0,0,0.54);
+   &:hover {
+    transform: scale(1.2);
+   }
+}
+
+@mixin floating-button {
+     width: 20%;
+            margin-bottom: 1em;
+            @include roundedDott;
+            background-color: $primary;
+            transition: all 0.2s linear;
+      &:hover {
+                border: none;
+                background-color: $secondary;
+                transform: scale(1.5)
+            }
+}
