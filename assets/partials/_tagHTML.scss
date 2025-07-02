@@ -14,7 +14,7 @@ nav {
     @include flexRowSB;
     background-color: $primary;
     width: 100%;
-    animation: buongiornissimo-nav 2s ease-in forwards;
+    @include buongiornissimo();
     img {
         width: 8%;
         transition: all 0.8s linear;
@@ -41,7 +41,7 @@ nav {
     @include flexCol;
     @include roundedDott;
     width: 60%;
-    animation: buongiornissimo-hero 2s ease-in forwards;
+     @include buongiornissimo2();
     .row {
         @include flexRow;
         h1 {
@@ -70,7 +70,7 @@ nav {
 }}
 main {
     width: 100%;
-    animation: buongiornissimo-main 2s ease-in forwards;
+     @include buongiornissimo();
     background-color: $primary;
     @include flexRow;
     flex-grow: 1;

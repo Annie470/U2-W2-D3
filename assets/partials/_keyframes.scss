@@ -1,4 +1,4 @@
-@keyframes buongiornissimo-nav {
+@keyframes buongiornissimo {
     0% {
         transform: translate(-250vh, 0);
     }
@@ -6,7 +6,7 @@
         transform: translate(0.0);
     }
 }
-@keyframes buongiornissimo-hero {
+@keyframes buongiornissimo2 {
     0% {
         transform: translate(0, -250vh);
     }
@@ -14,11 +14,10 @@
         transform: translate(0.0);
     }
 }
-@keyframes buongiornissimo-main {
-    0% {
-        transform: translate(250vh, 0);
-    }
-    100% {
-        transform: translate(0.0);
-    }
+
+@mixin buongiornissimo($duration: 2s, $timing: ease-in, $fill-mode: forwards) {
+  animation: buongiornissimo $duration $timing $fill-mode;
+}
+@mixin buongiornissimo2($duration: 2s, $timing: ease-in, $fill-mode: forwards) {
+  animation: buongiornissimo2 $duration $timing $fill-mode;
 }

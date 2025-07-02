@@ -132,6 +132,22 @@ body {
   margin-bottom: 3rem;
 }
 
+@keyframes buongiornissimo {
+  0% {
+    transform: translate(-250vh, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes buongiornissimo2 {
+  0% {
+    transform: translate(0, -250vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 body {
   height: 100vh;
   width: 100vw;
@@ -157,7 +173,7 @@ header nav {
   flex-direction: row;
   background-color: #FFC313;
   width: 100%;
-  animation: buongiornissimo-nav 2s ease-in forwards;
+  animation: buongiornissimo 2s ease-in forwards;
 }
 header nav img {
   width: 8%;
@@ -194,7 +210,7 @@ header #hero {
   border: 1px dotted black;
   border-radius: 50px;
   width: 60%;
-  animation: buongiornissimo-hero 2s ease-in forwards;
+  animation: buongiornissimo2 2s ease-in forwards;
 }
 header #hero .row {
   display: flex;
@@ -233,7 +249,7 @@ header #hero #btn-container button:hover {
 
 main {
   width: 100%;
-  animation: buongiornissimo-main 2s ease-in forwards;
+  animation: buongiornissimo 2s ease-in forwards;
   background-color: #FFC313;
   display: flex;
   align-items: center;
@@ -278,29 +294,4 @@ main div .card button:hover {
   border: none;
   background-color: rgb(255, 255, 0);
   transform: scale(1.5);
-}
-
-@keyframes buongiornissimo-nav {
-  0% {
-    transform: translate(-250vh, 0);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-@keyframes buongiornissimo-hero {
-  0% {
-    transform: translate(0, -250vh);
-  }
-  100% {
-    transform: translate(0);
-  }
-}
-@keyframes buongiornissimo-main {
-  0% {
-    transform: translate(250vh, 0);
-  }
-  100% {
-    transform: translate(0);
-  }
 }/*# sourceMappingURL=style.css.map */
