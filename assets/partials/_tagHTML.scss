@@ -14,7 +14,11 @@ nav {
     @include flexRowSB;
     background-color: $primary;
     width: 100%;
-    @include buongiornissimo();
+    @include buongiornissimo2(
+        buongiorno1,
+        -250vh, 0,
+        0,0
+    );
     img {
         width: 8%;
         transition: all 0.8s linear;
@@ -34,14 +38,18 @@ nav {
               background-color: $secondary;
               @include roundedDott;
               transform: scale(1.2)
-        }}
+        }} //lo lascio così come riferimento
     }
 } 
 #hero {
     @include flexCol;
     @include roundedDott;
     width: 60%;
-     @include buongiornissimo2();
+     @include buongiornissimo2(
+        buongiorno2,
+        0, -250vh,
+        0,0
+     );
     .row {
         @include flexRow;
         h1 {
@@ -63,7 +71,11 @@ nav {
 }}
 main {
     width: 100%;
-     @include buongiornissimo();
+     @include buongiornissimo2(
+         buongiorno3,
+        250vh, 0,
+        0,0
+     );
     background-color: $primary;
     @include flexRow;
     flex-grow: 1;

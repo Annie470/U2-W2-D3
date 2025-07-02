@@ -1,23 +1,13 @@
-@keyframes buongiornissimo {
+@mixin buongiornissimo2($name, $from-x, $from-y, $to-x: 0, $to-y: 0, $duration: 2s, $timing: ease-in, $fill-mode: forwards) {
+  
+  @keyframes #{$name} {
     0% {
-        transform: translate(-250vh, 0);
+      transform: translate(#{$from-x}, #{$from-y});
     }
     100% {
-        transform: translate(0.0);
+      transform: translate(#{$to-x}, #{$to-y});
     }
-}
-@keyframes buongiornissimo2 {
-    0% {
-        transform: translate(0, -250vh);
-    }
-    100% {
-        transform: translate(0.0);
-    }
-}
+  }
 
-@mixin buongiornissimo($duration: 2s, $timing: ease-in, $fill-mode: forwards) {
-  animation: buongiornissimo $duration $timing $fill-mode;
-}
-@mixin buongiornissimo2($duration: 2s, $timing: ease-in, $fill-mode: forwards) {
-  animation: buongiornissimo2 $duration $timing $fill-mode;
+  animation: #{$name} $duration $timing $fill-mode;
 }
