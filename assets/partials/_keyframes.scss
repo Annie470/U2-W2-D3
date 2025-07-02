@@ -1,0 +1,24 @@
+@keyframes buongiornissimo-nav {
+    0% {
+        transform: translate(-250vh, 0);
+    }
+    100% {
+        transform: translate(0.0);
+    }
+}
+@keyframes buongiornissimo-hero {
+    0% {
+        transform: translate(0, -250vh);
+    }
+    100% {
+        transform: translate(0.0);
+    }
+}
+@keyframes buongiornissimo-main {
+    0% {
+        transform: translate(250vh, 0);
+    }
+    100% {
+        transform: translate(0.0);
+    }
+}

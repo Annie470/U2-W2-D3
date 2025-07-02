@@ -119,20 +119,26 @@ body {
 
 .my-small {
   margin-top: 1rem;
-  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 .my-normal {
   margin-top: 2rem;
-  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
 
 .my-big {
   margin-top: 3rem;
-  margin-right: 3rem;
+  margin-bottom: 3rem;
 }
 
 body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   font-family: "Poiret One", sans-serif;
   font-weight: 600;
 }
@@ -142,6 +148,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  width: 100%;
 }
 header nav {
   display: flex;
@@ -150,6 +157,7 @@ header nav {
   flex-direction: row;
   background-color: #FFC313;
   width: 100%;
+  animation: buongiornissimo-nav 2s ease-in forwards;
 }
 header nav img {
   width: 8%;
@@ -159,7 +167,7 @@ header nav img:hover {
   background-color: white;
   border: 1px dotted black;
   border-radius: 50px;
-  transform: scale(1.5) translate(30px, 25px);
+  transform: scale(1.5) translate(35px, 25px);
 }
 header nav ul {
   display: flex;
@@ -186,6 +194,7 @@ header #hero {
   border: 1px dotted black;
   border-radius: 50px;
   width: 60%;
+  animation: buongiornissimo-hero 2s ease-in forwards;
 }
 header #hero .row {
   display: flex;
@@ -214,7 +223,7 @@ header #hero #btn-container button {
   border: 1px dotted black;
   border-radius: 50px;
   background-color: #FFC313;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 header #hero #btn-container button:hover {
   border: none;
@@ -224,13 +233,19 @@ header #hero #btn-container button:hover {
 
 main {
   width: 100%;
+  animation: buongiornissimo-main 2s ease-in forwards;
+  background-color: #FFC313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-grow: 1;
 }
 main div {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  background-color: #FFC313;
 }
 main div .card {
   display: flex;
@@ -241,7 +256,7 @@ main div .card {
   border: 1px dotted black;
   border-radius: 50px;
   background-color: white;
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 main div .card:hover {
   transform: scale(1.2);
@@ -263,4 +278,29 @@ main div .card button:hover {
   border: none;
   background-color: rgb(255, 255, 0);
   transform: scale(1.5);
+}
+
+@keyframes buongiornissimo-nav {
+  0% {
+    transform: translate(-250vh, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes buongiornissimo-hero {
+  0% {
+    transform: translate(0, -250vh);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes buongiornissimo-main {
+  0% {
+    transform: translate(250vh, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
 }/*# sourceMappingURL=style.css.map */

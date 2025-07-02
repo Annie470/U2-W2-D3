@@ -1,4 +1,7 @@
 body {
+    height: 100vh;
+    width: 100vw;
+    @include flexColSB;
     font: {
         family: $fontZilla;
         weight: 600; 
@@ -6,17 +9,19 @@ body {
 }
 header {
     @include flexCol;
+    width: 100%;
 nav {
     @include flexRowSB;
     background-color: $primary;
     width: 100%;
+    animation: buongiornissimo-nav 2s ease-in forwards;
     img {
         width: 8%;
         transition: all 0.8s linear;
         &:hover {
             background-color: white;
             @include roundedDott;
-            transform: scale(1.5) translate(30px, 25px);
+            transform: scale(1.5) translate(35px, 25px);
         }
     }
     ul {
@@ -36,6 +41,7 @@ nav {
     @include flexCol;
     @include roundedDott;
     width: 60%;
+    animation: buongiornissimo-hero 2s ease-in forwards;
     .row {
         @include flexRow;
         h1 {
@@ -53,7 +59,7 @@ nav {
             width: 20%;
             @include roundedDott;
             background-color: $primary;
-            transition: all 0.3s linear;
+            transition: all 0.2s linear;
             &:hover {
                 border: none;
                 background-color: $secondary;
@@ -64,15 +70,18 @@ nav {
 }}
 main {
     width: 100%;
+    animation: buongiornissimo-main 2s ease-in forwards;
+    background-color: $primary;
+    @include flexRow;
+    flex-grow: 1;
     div{
         @include flexRowSB;
-        background-color: $primary;
         .card {
             @include flexCol;
             width: 20%;
             @include roundedDott;
             background-color: white;
-            transition: all 0.5s linear;
+            transition: all 0.3s linear;
               &:hover {
                     transform: scale(1.2);
                 }

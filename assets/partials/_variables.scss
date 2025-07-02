@@ -58,7 +58,7 @@ $fontZilla : "Poiret One", sans-serif;
 @each $name, $value in $sizes-map {
     .my-#{$name} {
         margin-top: $value;
-        margin-right: $value;
+        margin-bottom: $value;
     }
 }
 
@@ -83,6 +83,10 @@ $fontZilla : "Poiret One", sans-serif;
 }
 @mixin flexCol {
     @include flex;
+    flex-direction: column;
+}
+@mixin flexColSB {
+    @include flexSB;
     flex-direction: column;
 }
 
