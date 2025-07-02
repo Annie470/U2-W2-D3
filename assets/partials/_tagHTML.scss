@@ -1,20 +1,97 @@
+body {
+    font: {
+        family: $fontZilla;
+        weight: 600; 
+    }
+}
+header {
+    @include flexCol;
 nav {
-    @include flexRow;
+    @include flexRowSB;
     background-color: $primary;
+    width: 100%;
     img {
         width: 8%;
+        transition: all 0.8s linear;
+        &:hover {
+            background-color: white;
+            @include roundedDott;
+            transform: scale(1.5) translate(30px, 25px);
+        }
     }
     ul {
         @include flexRow;
-        list-style-type: none
+        list-style-type: none;
+        li {
+            @include rounded;
+             transition: all 0.3s linear;
+            &:hover {
+              background-color: $secondary;
+              @include roundedDott;
+              transform: scale(1.2)
+        }}
     }
 } 
 #hero {
     @include flexCol;
+    @include roundedDott;
+    width: 60%;
     .row {
         @include flexRow;
+        h1 {
+    @include main-title;
+        }
         img {
-            width: 30%;
+            width: 45%;
+            @include rounded;
+        }
+    }
+    #btn-container {
+        width: 40%;
+        @include flexRowSB;
+        button {
+            width: 20%;
+            @include roundedDott;
+            background-color: $primary;
+            transition: all 0.3s linear;
+            &:hover {
+                border: none;
+                background-color: $secondary;
+                transform: scale(1.5)
+            }
+        }
+    }
+}}
+main {
+    width: 100%;
+    div{
+        @include flexRowSB;
+        background-color: $primary;
+        .card {
+            @include flexCol;
+            width: 20%;
+            @include roundedDott;
+            background-color: white;
+            transition: all 0.5s linear;
+              &:hover {
+                    transform: scale(1.2);
+                }
+            img{
+                width: 100%;
+                @include roundedDott;
+            }
+            button {
+            width: 20%;
+            margin-bottom: 1em;
+            @include roundedDott;
+            background-color: $primary;
+            transition: all 0.2s linear;
+            &:hover {
+                border: none;
+                background-color: $secondary;
+                transform: scale(1.5)
+            }
+            }
         }
     }
 }
