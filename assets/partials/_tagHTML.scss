@@ -1,0 +1,20 @@
+nav {
+    @include flexRow;
+    background-color: $primary;
+    img {
+        width: 8%;
+    }
+    ul {
+        @include flexRow;
+        list-style-type: none
+    }
+} 
+#hero {
+    @include flexCol;
+    .row {
+        @include flexRow;
+        img {
+            width: 30%;
+        }
+    }
+}
